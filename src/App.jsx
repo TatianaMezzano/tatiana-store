@@ -21,7 +21,7 @@ function App() {
                 <Route exact path="/" element={<ItemListContainer greeting={<Home/>}/>} />
                 <Route exact path="/category/:categoryName" element={<ItemListContainer greeting={<CategoryPage/>}/>} />
                 <Route exact path="/item/:productId" element={<ItemDetailContainer greeting={<ProducItem/>}/>}/>   
-                 
+                <Route exact path="/"/>
                 <Route path="*" element={<h1>Not Found</h1>}/>          
             </Routes>
         </>

@@ -3,74 +3,83 @@
   [
       {
           "id": "1",
-          "title": "Compu 1",
-          "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ",
-          "img": "./images/compu/compu1.jpg"
+          "category":"Pastas",
+          "title": "Spaghettis con tuco ",
+          "descripcion": "Spaghettis caseros con tuco",
+          "img": "/images/pastas/pastaUno.jpg"
           
         },
 
 
         {
           "id": "2",
-          "title": "Compu 2",
-          "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ",
-          "img": "./images/compu/compu2.jpg"
+          "category":"Pastas",
+          "title": "Spaghettis con pesto",
+          "descripcion": "Spaghettis caseros con pesto de albahaca y ajo",
+          "img": "/images/pastas/pastaDos.jpg"
           
         },
 
         {
           "id": "3",
-          "title": "Compu 3",
-          "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ",
-          "img": "./images/compu/compu3.jpg"
+          "category":"Pizzas",
+          "title": "Caprese",
+          "descripcion": "Tomate, queso y albahaca",
+          "img": "/images/pizzas/pizzaUno.jpg"
           
         },
 
         {
           "id": "4",
-          "title": "Compu 4",
-          "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ",
-          "img": "./images/compu/compu4.jpg"
+          "category":"Pizzas",
+          "title": "Pepperoni",
+          "descripcion": "Muzza y pepperoni",
+          "img": "/images/pizzas/pizzaDos.jpg."
           
         },
 
         {
           "id": "5",
-          "title": "Compu 5",
-          "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ",
-          "img": "./images/compu/compu5.jpg"
+          "category":"Pizzas",
+          "title": "Hawaiana",
+          "descripcion": "Muzza, jamón y ananá",
+          "img": "/images/pizzas/pizzaTres.jpg"
           
         },
 
         {
           "id": "6",
-          "title": "Compu 6",
-          "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ",
-          "img": "./images/compu/compu6.jpg"
+          "category":"Empanadas",
+          "title": "Carne",
+          "descripcion": "Carne 100% vacuna, cebolla, morrón y pasas de uva (opcional) ",
+          "img": "/images/empanadas/empanadaDos.jpg"
           
         },
 
         {
           "id": "7",
-          "title": "Compu 7",
-          "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ",
-          "img": "./images/compu/compu7.jpg"
+          "category":"Empanadas",
+          "title": "Verduras asadas",
+          "descripcion": "Cebolla, morrón, berenjena, zucchini y zanahoria",
+          "img": "/images/empanadas/empanadaUno.jpg"
           
         },
 
         {
           "id": "8",
-          "title": "Compu 8",
-          "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ",
-          "img": "./images/compu/compu8.jpg"
+          "category":"Hamburguesas",
+          "title": "Hamburguesa con queso",
+          "descripcion": "Hamburguesa casera con queso cheddar",
+          "img": "/images/hamburguesas/hamburguesaUno.jpg"
           
         },
 
         {
           "id": "9",
-          "title": "Compu 9",
-          "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ",
-          "img": "./images/compu/compu9.jpg"
+          "category":"Hamburguesas",
+          "title": "Hamburguesa completa",
+          "descripcion": "Hamburguesa casera con tomate, lechuga, pepinillos, bacon, alioli y papas",
+          "img": "/images/hamburguesas/hamburguesaDos.jpg"
           
         },
 
@@ -78,65 +87,37 @@
 
         {
           "id": "10",
-          "title": "Cel 1",
-          "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ",
-          "img": "./images/cel/cel1.jpg.jpg"
+          "category":"Hamburguesas",
+          "title": "Veggie",
+          "descripcion": "Hamburguesa de remolacha con guacamole y hummus de zanahoria",
+          "img": "/images/hamburguesas/hamburguesaTres.jpg"
           
         },
 
         {
           "id": "11",
-          "title": "Cel 2",
-          "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ",
-          "img": "./images/cel/cel2.jpg"
+          "category":"Milanesas",
+          "title": "Milanesa simple",
+          "descripcion": "Milanesa de carne o pollo con papas",
+          "img": "/images/milanesas/milaUno.jpg"
           
         },
 
         {
           "id": "12",
-          "title": "Cel 3",
-          "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ",
-          "img": "./images/cel/cel3.jpg"
+          "category":"Milanesas",
+          "title": "Milanesa al pan",
+          "descripcion": "Milanesa de carne o pollo al pan con vegetales",
+          "img": "/images/milanesas/milaDos.jpg"
           
         },
 
         {
           "id": "13",
-          "title": "Cel 4",
-          "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ",
-          "img": "./images/cel/cel4.jpg.jpg"
-          
-        },
-
-        {
-          "id": "14",
-          "title": "Cel 5",
-          "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ",
-          "img": "./images/cel/cel5.jpg.jpg"
-          
-        },
-
-        {
-          "id": "15",
-          "title": "Cel 6",
-          "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ",
-          "img": "./images/cel/cel6.jpg"
-          
-        },
-
-        {
-          "id": "16",
-          "title": "Cel 7",
-          "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ",
-          "img": "./images/cel/cel7.jpg"
-          
-        },
-
-        {
-          "id": "17",
-          "title": "Cel 8",
-          "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ",
-          "img": "./images/cel/cel8.jpg"
+          "category":"Milanesas",
+          "title": "Napolitana",
+          "descripcion": "Milanesa de carne o pollo con jamón, muzza, tomate y papas",
+          "img": "/images/milanesas/milaTres.jpg"
           
         }
   ]

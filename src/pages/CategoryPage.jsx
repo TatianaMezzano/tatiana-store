@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const getProductsList = () => {
   return fetch('/productos.json')
@@ -12,7 +12,9 @@ const getProductsList = () => {
 }
 
 const CategoryPage = () => {
+    const { categoryName } = useParams();
     const [productsList, setProductsList] = useState([]);
+    const [filteredProducts, setFilteredProducts] = useState([]);
 
     useEffect(() => {
         getProductsList()
@@ -20,7 +22,7 @@ const CategoryPage = () => {
                 if (data && data.results) {
                     setProductsList(data.results);
                 } else {
-                    throw new Error("Datos de API incorrectos o falta la propiedad 'results'.");
+                    throw new Error("error");
                 }
             })
             .catch((error) => {
@@ -28,11 +30,17 @@ const CategoryPage = () => {
             });
     }, []);
 
+    useEffect(() => {
+        // Filtra los productos basados en la categoría actual
+        const filtered = productsList.filter(product => product.category === categoryName);
+        setFilteredProducts(filtered);
+    }, [categoryName, productsList]);
+
     return (
-        <div>
-            <h1>Productos</h1>
+        <div className="contenedor">
+            <h1>{categoryName}</h1>
             <ul>
-                {productsList.map((product) => (
+                {filteredProducts.map((product) => (
                     <li key={product.id}>
                         <Link to={`/item/${product.id}`}>{product.title}</Link>
                     </li>

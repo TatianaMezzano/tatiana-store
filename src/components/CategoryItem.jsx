@@ -1,9 +1,9 @@
-
+import { Link } from "react-router-dom"
 const CategoryItem = ({name}) => {
     return (
-        <a className='nav-link active fw-bolder' aria-current="page" href="#">
+        <Link className='nav-link active fw-bolder' aria-current="page" to={`/category/${name}`}>
             {name}
-        </a>        
+        </Link>        
     )
 }
 
