@@ -13,10 +13,43 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 2rem;
 
 }
 
 .images{
   width: 30%;
   margin: 1.5rem;
+}
+
+h1{
+  margin: 1.5 rem;
+}
+
+.producto {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+} 
+
+.img-galeria{
+  max-width: 100%; 
+  height: auto; 
+}
+
+.galeria-container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 20px; 
+}
+
+.counter-container{
+  display: flex;
+  flex-direction: row;
+}
+
+.card-contenedor{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

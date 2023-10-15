@@ -26,6 +26,9 @@ const NavBar = () => {
                     <li className="nav-item">
                         <CategoryItem name="Milanesas"/>
                     </li>
+                    <li className="nav-item">
+                        <CategoryItem name="Ensaladas"/>
+                    </li>
                     
                     
                     

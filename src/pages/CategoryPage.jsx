@@ -1,40 +1,19 @@
-import { useEffect, useState } from "react";
+import useFetch from "../useFetch.js" 
 import { Link, useParams } from "react-router-dom";
-
-const getProductsList = () => {
-  return fetch('/productos.json')
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Error al cargar el archivo');
-      }
-      return response.json();
-    });
-}
+import { useState, useEffect } from "react";
 
 const CategoryPage = () => {
-    const { categoryName } = useParams();
-    const [productsList, setProductsList] = useState([]);
-    const [filteredProducts, setFilteredProducts] = useState([]);
+
+    const { categoryName } = useParams();    
+    const [filteredProducts, setFilteredProducts] = useState([]);    
+    const { data } = useFetch("/productos.json")
 
     useEffect(() => {
-        getProductsList()
-            .then((data) => {
-                if (data && data.results) {
-                    setProductsList(data.results);
-                } else {
-                    throw new Error("error");
-                }
-            })
-            .catch((error) => {
-                console.error(error);
-            });
-    }, []);
-
-    useEffect(() => {
-        // Filtra los productos basados en la categoría actual
-        const filtered = productsList.filter(product => product.category === categoryName);
-        setFilteredProducts(filtered);
-    }, [categoryName, productsList]);
+        if (data.length > 0) {
+            const filtered = data.filter(product => product.category === categoryName)
+            setFilteredProducts(filtered);
+        }
+    }, [categoryName, data]);
 
     return (
         <div className="contenedor">
@@ -48,6 +27,9 @@ const CategoryPage = () => {
             </ul>
         </div>
     );
-};
+
+
+}
+
 
 export default CategoryPage;
