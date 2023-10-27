@@ -30,7 +30,15 @@ h1{
   display: flex;
   flex-direction: column;
   align-items: center; 
+  margin: 2rem;
 } 
+
+.info-product-galeria{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+}
 
 .img-galeria{
   max-width: 100%; 
@@ -43,13 +51,64 @@ h1{
   gap: 20px; 
 }
 
+.category-list{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem;
+  list-style: none;
+}
+
+.list-item{
+  margin: 3rem;
+  font-size: 1.5rem;
+  
+}
+
+
 .counter-container{
   display: flex;
   flex-direction: row;
+  margin: 2rem;
 }
 
 .card-contenedor{
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.cartItem-container{
+  display: flex;
+  flex-direction: row; 
+  padding: 1rem;
+  margin: 1rem; 
+  
+}
+
+.cartProduct-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.noProduct-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5rem;
+}
+
+.item{
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.total-price{
+  margin: 4rem;  
+}
+
+.buttons-cart{
+  margin: 3rem;
 }

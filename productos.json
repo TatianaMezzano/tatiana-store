@@ -7,7 +7,7 @@
           "title": "Spaghettis con tuco ",
           "descripcion": "Spaghettis caseros con tuco",
           "img": "/images/pastas/pastaUno.jpg",
-          "price" : "$300"
+          "price" : "300"
           
           
         },
@@ -19,7 +19,7 @@
           "title": "Spaghettis con pesto",
           "descripcion": "Spaghettis caseros con pesto de albahaca y ajo",
           "img": "/images/pastas/pastaDos.jpg",
-          "price" : "$300"
+          "price" : "300"
           
         },
 
@@ -29,7 +29,7 @@
           "title": "Caprese",
           "descripcion": "Tomate, queso y albahaca",
           "img": "/images/pizzas/pizzaUno.jpg",
-          "price" : "$380"
+          "price" : "380"
           
         },
 
@@ -39,7 +39,7 @@
           "title": "Pepperoni",
           "descripcion": "Muzza y pepperoni",
           "img": "/images/pizzas/pizzaDos.jpg",
-          "price" : "$400"
+          "price" : "400"
           
         },
 
@@ -49,7 +49,7 @@
           "title": "Hawaiana",
           "descripcion": "Muzza, jamón y ananá",
           "img": "/images/pizzas/pizzaTres.jpg",
-          "price" : "$400"
+          "price" : "400"
           
         },
 
@@ -59,7 +59,7 @@
           "title": "Carne",
           "descripcion": "Carne 100% vacuna, cebolla, morrón y pasas de uva (opcional) ",
           "img": "/images/empanadas/empanadaDos.jpg",
-          "price" : "3 x $280"
+          "price" : "80"
           
         },
 
@@ -69,7 +69,7 @@
           "title": "Verduras asadas",
           "descripcion": "Cebolla, morrón, berenjena, zucchini y zanahoria",
           "img": "/images/empanadas/empanadaUno.jpg",
-          "price" : "3 x $280"
+          "price" : "80"
           
         },
 
@@ -79,7 +79,7 @@
           "title": "Hamburguesa con queso",
           "descripcion": "Hamburguesa casera con queso cheddar",
           "img": "/images/hamburguesas/hamburguesaUno.jpg",
-          "price" : "$180"
+          "price" : "180"
           
         },
 
@@ -89,7 +89,7 @@
           "title": "Hamburguesa completa",
           "descripcion": "Hamburguesa casera con tomate, lechuga, pepinillos, bacon, alioli y papas",
           "img": "/images/hamburguesas/hamburguesaDos.jpg",
-          "price" : "$450"
+          "price" : "450"
           
         },
 
@@ -100,7 +100,7 @@
           "title": "Veggie",
           "descripcion": "Hamburguesa de remolacha con guacamole, hummus de zanahoria y papas",
           "img": "/images/hamburguesas/hamburguesaTres.jpg",
-          "price" : "$450"
+          "price" : "450"
           
         },
 
@@ -110,7 +110,7 @@
           "title": "Milanesa al plato",
           "descripcion": "Milanesa de carne o pollo con papas",
           "img": "/images/milanesas/milaUno.jpg",
-          "price" : "$290"
+          "price" : "290"
           
         },
 
@@ -120,7 +120,7 @@
           "title": "Milanesa al pan",
           "descripcion": "Milanesa de carne o pollo al pan con vegetales",
           "img": "/images/milanesas/milaDos.jpg",
-          "price" : "$320"
+          "price" : "320"
           
         },
 
@@ -130,7 +130,7 @@
           "title": "Napolitana",
           "descripcion": "Milanesa de carne o pollo con jamón, muzza, tomate y papas",
           "img": "/images/milanesas/milaTres.jpg",
-          "price" : "$450"
+          "price" : "450"
           
         },
 
@@ -140,7 +140,7 @@
           "title": "Cesar",
           "descripcion": "Pollo, lechuga romana, croûtons, jugo de limón, aceite de oliva, huevo, salsa Worcestershire, ajo, mostaza de Dijon, queso parmesano y pimienta negra.",
           "img": "/images/ensaladas/ensaladaUno.jpg",
-          "price" : "$300"
+          "price" : "300"
           
         },
 
@@ -150,7 +150,7 @@
           "title": "Waldorf",
           "descripcion": "Pollo, manzana verde, lechuga, nueces, apio, queso azul y alioli",
           "img": "/images/ensaladas/ensaladaDos.jpg",
-          "price" : "$350"
+          "price" : "350"
           
         }
 

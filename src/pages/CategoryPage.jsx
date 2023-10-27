@@ -18,9 +18,9 @@ const CategoryPage = () => {
     return (
         <div className="contenedor">
             <h1>{categoryName}</h1>
-            <ul>
+            <ul className="category-list">
                 {filteredProducts.map((product) => (
-                    <li key={product.id}>
+                    <li className="list-item" key={product.id}>
                         <Link to={`/item/${product.id}`}>{product.title}</Link>
                     </li>
                 ))}

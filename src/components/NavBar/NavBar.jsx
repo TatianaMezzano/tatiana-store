@@ -1,7 +1,7 @@
 import Brand from "./Brand"
 import CategoryItem from './CategoryItem';
 import MenuButton from './MenuButton';
-import CartWidge from './CartWidge';
+import CartWidge from '../Cart/CartWidge';
 
 const NavBar = () => {
     return  (
@@ -28,8 +28,7 @@ const NavBar = () => {
                     </li>
                     <li className="nav-item">
                         <CategoryItem name="Ensaladas"/>
-                    </li>
-                    
+                    </li>                   
                     
                     
                    

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import useFetch from "../useFetch";
 import { Link } from "react-router-dom";
+import MenuProducts from "../components/MenuProducts/MenuProducts";
 
 
 
@@ -11,7 +12,7 @@ const Home = () => {
     useEffect(() => {
         if (data) {
             setProducts(data);
-            console.log(products)
+            
         }
     }, [data]);
 
@@ -22,10 +23,7 @@ const Home = () => {
                 {products.map((product) => (
                     <div key={product.id} className="producto">
                         <Link to={`/item/${product.id}`}>
-                            <div className="card-contenedor">
-                                <img className="img-galeria" src={product.img} alt={product.title} />
-                                <b>{product.price}</b>
-                            </div>
+                            <MenuProducts product={product}/>
                         </Link>
                         
                         

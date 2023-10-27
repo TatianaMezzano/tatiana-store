@@ -1,11 +1,11 @@
-import { useState } from "react"
 
-const Counter = () => {
-    const [count, setCount] = useState(0)
+
+const Counter = ({count, setCount}) => {
+    
     return (
         <div >           
             
-            <button onClick={() => setCount((count) => count - 1)}>
+            <button onClick={() => count > 1 ? setCount((count) => count - 1):null}>
                 -
             </button>
             {count}
