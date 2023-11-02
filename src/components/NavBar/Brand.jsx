@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 const Brand = () => {
     return (
-        <Link className="navbar-brand" to="/">TatiBar</Link>
+        <Link className="brand" to="/">TatiBar</Link>
     )
 }
 

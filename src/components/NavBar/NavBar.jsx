@@ -5,7 +5,7 @@ import CartWidge from '../Cart/CartWidge';
 
 const NavBar = () => {
     return  (
-        <nav className="navbar navbar-expand-lg bg-body-tertiary">
+        <nav className="navbar navbar-expand-lg">
             <div className="container-fluid">
                 <Brand/>
                 <MenuButton/>

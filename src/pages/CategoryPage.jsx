@@ -37,7 +37,9 @@ const CategoryPage = ({data}) => {
             <ul className="category-list">
                 {filteredProducts.map((product) => (
                     <li className="list-item" key={product.id}>
-                        <Link to={`/item/${product.title}`}>{product.title}</Link>
+                        <Link to={`/item/${product.title}`}>
+                            <button className="category-button">{product.title}</button> 
+                        </Link>
                     </li>
                 ))}
             </ul>

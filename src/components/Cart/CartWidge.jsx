@@ -5,8 +5,8 @@ import { Link } from "react-router-dom"
 const CartWidge = () => {
     return (
         <Link to="/cart">
-            <div className="bg-warning rounded-circle p-3 position-relative">
-                <CartIcon color= "#4192D5"/>
+            <div className="cart-icon rounded-circle p-3 position-relative">
+                <CartIcon color= "#FFFFFF"/>
                 <CartNumber />
             </div>
         </Link>

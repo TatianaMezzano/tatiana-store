@@ -10,6 +10,7 @@ import { Route, Routes } from 'react-router-dom';
 import Cart from './components/Cart/Cart';
 import { useEffect, useState } from 'react';
 import { getFirestore, collection, getDocs } from 'firebase/firestore';
+import Footer from './components/Footer/Footer';
 
 function App() {
     const [items, setItems] = useState([]);
@@ -41,6 +42,7 @@ function App() {
                 <Route path="/cart" element={<Cart />} />
                 <Route path="*" element={<h1>Not Found</h1>} />
             </Routes>
+            <Footer/>
         </CartProvider>
     );
 }

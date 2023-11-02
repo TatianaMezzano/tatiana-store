@@ -5,11 +5,11 @@ const Counter = ({count, setCount}) => {
     return (
         <div >           
             
-            <button onClick={() => count > 1 ? setCount((count) => count - 1):null}>
+            <button className="counter" onClick={() => count > 1 ? setCount((count) => count - 1):null}>
                 -
             </button>
-            {count}
-            <button onClick={() => setCount((count) => count + 1)}>
+            <b className="count">{count}</b>
+            <button className="counter" onClick={() => setCount((count) => count + 1)}>
                 +
             </button>
 

@@ -59,14 +59,14 @@ const ProductItem = ({ data }) => {
         <div className="contenedor">
           <h1>{filteredProduct.title}</h1>
           <img className="images" src={filteredProduct.imageURL} alt={filteredProduct.title} />
-          <h3>Descripción: </h3>
-          <p>{filteredProduct.descripcion}</p>
-          <b>${filteredProduct.price}</b>
+          
+          <p className="description">{filteredProduct.description}</p>
+          <b className="price">${filteredProduct.price}</b>
           <div className="counter-container">
             <Counter count={count} setCount={setCount} />
-            <button onClick={handleAddClick}>Agregar al carrito</button>
+            <button className="add-to-cart" onClick={handleAddClick}>Agregar al carrito</button>
           </div>
-          <Link to="/cart">Ir al carrito</Link>
+          
         </div>
       ) : (
         // Mostrar mensaje de "Cargando..." mientras se obtiene el producto
