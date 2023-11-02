@@ -1,60 +1,78 @@
 import { useContext, useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import useFetch from "../useFetch";
 import Counter from "../components/ItemDetail/Counter";
 import { CartContext } from "../context/CartContext";
+import { where, query, getDocs, collection } from "firebase/firestore";
 
-const ProductItem = () => {
-  const [product, setProduct] = useState(null);
-  const { productId } = useParams();
-  const { data } = useFetch("/productos.json");
+const ProductItem = ({ data }) => {
+  const { productTitle } = useParams();
   const { addItem } = useContext(CartContext);
 
-  const [count, setCount] = useState(1); // Inicializa el estado local de count en 1
+  const [count, setCount] = useState(1);
+  const [resultsFound, setResultsFound] = useState(false);
+  const [filteredProduct, setFilteredProduct] = useState(null);
 
   useEffect(() => {
-    if (data.length > 0) {
-      const foundProduct = data.find((product) => product.id === productId);
-      if (foundProduct) {
-        setProduct(foundProduct);
-      }
-    }
-  }, [productId, data]);
+    if(productTitle){
+    const q = query(collection(data, 'items'), where("title", "==", productTitle));
+    getDocs(q)
+      .then((info) => {
+        if (info.size === 0) {
+          // No se encontraron resultados
+          setResultsFound(true);
+          setFilteredProduct(null); // Establecer producto como null
+        } else {
+          // Se encontró un producto
+          setFilteredProduct({
+            id: info.docs[0].id,
+            ...info.docs[0].data(),
+          });
+        }
+      })
+      .catch((error) => {
+        console.error("Error fetching product:", error);
+        setResultsFound(true);
+        setFilteredProduct(null);
+      });}
+  }, [productTitle]);
 
   const handleAddClick = () => {
-    
-    const item = {
-      id: product.id,
-      title: product.title,
-      price: product.price,
-    };
-
-    addItem(item, count); 
-    console.log(item)
-    console.log(count)
+    if (filteredProduct) {
+      const item = {
+        id: filteredProduct.id,
+        title: filteredProduct.title,
+        price: filteredProduct.price,
+      };
+      addItem(item, count);
+    }
   };
 
   return (
     <>
-      {product ? (
+      {resultsFound ? (
+        // Mostrar mensaje de "no se encontraron resultados" o manejar el error aquí
         <div className="contenedor">
-          <h1>{product.title}</h1>
-          <img className="images" src={product.img} alt={product.title} />
+          <p>No se encontraron resultados para {productTitle}.</p>
+        </div>
+      ) : filteredProduct ? (
+        // Mostrar el producto si se encontró
+        <div className="contenedor">
+          <h1>{filteredProduct.title}</h1>
+          <img className="images" src={filteredProduct.imageURL} alt={filteredProduct.title} />
           <h3>Descripción: </h3>
-          <p>{product.descripcion}</p>
-          <b>${product.price}</b>
+          <p>{filteredProduct.descripcion}</p>
+          <b>${filteredProduct.price}</b>
           <div className="counter-container">
-
             <Counter count={count} setCount={setCount} />
-            
             <button onClick={handleAddClick}>Agregar al carrito</button>
           </div>
           <Link to="/cart">Ir al carrito</Link>
-            
-          
         </div>
       ) : (
-        <p>Cargando...</p>
+        // Mostrar mensaje de "Cargando..." mientras se obtiene el producto
+        <div className="contenedor">
+          <p>Cargando...</p>
+        </div>
       )}
     </>
   );

@@ -1,19 +1,35 @@
-import useFetch from "../useFetch.js" 
 import { Link, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { where, query, getDocs, collection } from "firebase/firestore";
 
-const CategoryPage = () => {
+const CategoryPage = ({data}) => {
+    const { categoryName } = useParams();
+    const [filteredProducts, setFilteredProducts] = useState([]);
+    const [resultsFound, setResultsFound] = useState(false);
+    const [prevCategoryName, setPrevCategoryName] = useState("");
 
-    const { categoryName } = useParams();    
-    const [filteredProducts, setFilteredProducts] = useState([]);    
-    const { data } = useFetch("/productos.json")
 
     useEffect(() => {
-        if (data.length > 0) {
-            const filtered = data.filter(product => product.category === categoryName)
-            setFilteredProducts(filtered);
+        if (categoryName !== prevCategoryName) {
+            // Realizar la solicitud a la base de datos solo si la categoría ha cambiado
+            const q = query(collection(data, 'items'), where("category", "==", categoryName));
+            getDocs(q).then((info) => {
+                if (info.size === 0 && !resultsFound) {
+                    console.log("no results");
+                    setResultsFound(true);
+                } else {
+                    setFilteredProducts(info.docs.map((doc) => ({
+                        id: doc.id,
+                        ...doc.data()
+                    })));
+                }
+            });
+            setPrevCategoryName(categoryName);
+
         }
-    }, [categoryName, data]);
+        
+    }, [categoryName]);
+    
 
     return (
         <div className="contenedor">
@@ -21,7 +37,7 @@ const CategoryPage = () => {
             <ul className="category-list">
                 {filteredProducts.map((product) => (
                     <li className="list-item" key={product.id}>
-                        <Link to={`/item/${product.id}`}>{product.title}</Link>
+                        <Link to={`/item/${product.title}`}>{product.title}</Link>
                     </li>
                 ))}
             </ul>

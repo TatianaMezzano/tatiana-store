@@ -1,12 +1,17 @@
-const MenuProducts = ({product}) => {
-    return(
-        <div className="card-contenedor">
-            <img className="img-galeria" src={product.img} alt={product.title} />
-            <div className="info-product-galeria">
-                <b>{product.title}</b>
-                <b>${product.price}</b>
+const MenuProducts = ({ item }) => {
+    if (item ) {
+        return (
+            <div className="card-contenedor">
+                <img className="img-galeria" src={item.imageURL} alt={item.title} />
+                <div className="info-product-galeria">
+                    <b>{item.title}</b>
+                    <b>${item.price}</b>
+                </div>
             </div>
-        </div>
-    )
-} 
-export default MenuProducts
+        );
+    } else {
+        return <div>No se ha proporcionado un elemento válido.</div>;
+    }
+};
+
+export default MenuProducts;
