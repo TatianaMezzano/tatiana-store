@@ -1,7 +1,12 @@
 import Brand from "./Brand"
-import CategoryItem from './CategoryItem';
 import MenuButton from './MenuButton';
 import CartWidge from '../Cart/CartWidge';
+import PastaIcon from "./Iconos/PastaIcon";
+import PizzaIcon from "./Iconos/PizzaIcon";
+import BurgerIcon from "./Iconos/BurgerIcon";
+import SaladIcon from "./Iconos/SaladIcon";
+import TacoIcon from "./Iconos/TacoIcon";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
     return  (
@@ -12,24 +17,23 @@ const NavBar = () => {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                     <li className="nav-item">
-                        <CategoryItem name="Pastas"/>
+                        <Link to="/category/Pastas"><PastaIcon/></Link>
                     </li>
                     <li className="nav-item">
-                        <CategoryItem name="Pizzas"/>
+                        <Link to="/category/Pizzas"><PizzaIcon/></Link>
                     </li>
-                    <li className="nav-item">
-                        <CategoryItem name="Empanadas"/>
-                    </li>
-                    <li className="nav-item">
-                        <CategoryItem name="Hamburguesas"/>
-                    </li>
-                    <li className="nav-item">
-                        <CategoryItem name="Milanesas"/>
-                    </li>
-                    <li className="nav-item">
-                        <CategoryItem name="Ensaladas"/>
-                    </li>                   
                     
+                    <li className="nav-item">
+                        <Link to="/category/Hamburguesas"><BurgerIcon/></Link>
+                    </li>
+                    
+                    <li className="nav-item">
+                        <Link to="/category/Ensaladas"><SaladIcon/></Link>
+                    </li>     
+                    
+                    <li className="nav-item">
+                        <Link to="/category/Tacos"><TacoIcon/></Link>
+                    </li>
                     
                    
                 </ul>

@@ -8,7 +8,7 @@ const Home = ({items}) => {
     
     return (
         <div className="contenedor">
-            <h1>Bienvenid@ a TatiBar!</h1>
+            <h1 className="titulo">TatiBar</h1>
             <div className="galeria-container">
                 {items.map((item) => (
                     <div key={item.id} className="producto">

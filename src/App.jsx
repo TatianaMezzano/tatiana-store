@@ -34,15 +34,17 @@ function App() {
     })
     return (
         <CartProvider>
-            <NavBar />
-            <Routes>
-                <Route path="/" element={<ItemListContainer greeting={<Home items={items}/>} />} />
-                <Route path="/category/:categoryName" element={<ItemListContainer greeting={<CategoryPage data={db} />}/>}  />
-                <Route path="/item/:productTitle" element={<ItemDetailContainer greeting={<ProducItem data={db}/>} />} />
-                <Route path="/cart" element={<Cart />} />
-                <Route path="*" element={<h1>Not Found</h1>} />
-            </Routes>
-            <Footer/>
+            <div className='app-container'>
+                <NavBar />
+                <Routes>
+                    <Route path="/" element={<ItemListContainer greeting={<Home items={items}/>} />} />
+                    <Route path="/category/:categoryName" element={<ItemListContainer greeting={<CategoryPage data={db} />}/>}  />
+                    <Route path="/item/:productTitle" element={<ItemDetailContainer greeting={<ProducItem data={db}/>} />} />
+                    <Route path="/cart" element={<Cart />} />
+                    <Route path="*" element={<h1>Not Found</h1>} />
+                </Routes>
+                <Footer/>
+            </div>
         </CartProvider>
     );
 }

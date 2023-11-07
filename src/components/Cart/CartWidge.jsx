@@ -6,7 +6,7 @@ const CartWidge = () => {
     return (
         <Link to="/cart">
             <div className="cart-icon rounded-circle p-3 position-relative">
-                <CartIcon color= "#FFFFFF"/>
+                <CartIcon className="just-cart-icon" color= "#FFFFFF"/>
                 <CartNumber />
             </div>
         </Link>

@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams} from "react-router-dom";
 import Counter from "../components/ItemDetail/Counter";
 import { CartContext } from "../context/CartContext";
 import { where, query, getDocs, collection } from "firebase/firestore";
@@ -52,12 +52,12 @@ const ProductItem = ({ data }) => {
       {resultsFound ? (
         // Mostrar mensaje de "no se encontraron resultados" o manejar el error aquí
         <div className="contenedor">
-          <p>No se encontraron resultados para {productTitle}.</p>
+          <p >No se encontraron resultados para {productTitle}.</p>
         </div>
       ) : filteredProduct ? (
         // Mostrar el producto si se encontró
         <div className="contenedor">
-          <h1>{filteredProduct.title}</h1>
+          <h1 className="product-title">{filteredProduct.title}</h1>
           <img className="images" src={filteredProduct.imageURL} alt={filteredProduct.title} />
           
           <p className="description">{filteredProduct.description}</p>
