@@ -1,5 +1,4 @@
 
-
 const Counter = ({count, setCount}) => {
     
     return (

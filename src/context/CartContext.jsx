@@ -1,4 +1,7 @@
 import { createContext, useState, useEffect } from "react";
+import Toastify from 'toastify-js'
+import "toastify-js/src/toastify.css"
+
 
 export const CartContext = createContext({
   cart: [],
@@ -12,11 +15,26 @@ export const CartProvider = ({ children }) => {
   const [total, setTotal] = useState();
 
   const addItem = (item, quantity) => {
+    //si el producto no esta en el carrito se agrega, sino se despliega el toast
     if (!isInCart(item.id)) {
       setCart((prev) => [...prev, { ...item, quantity }]);
     } else {
-      console.log("El producto ya fue agregado");
-    }
+        Toastify({
+          text: "Este producto ya fue agregado",
+          duration: 3000,
+          destination: "https://github.com/apvarun/toastify-js",
+          newWindow: true,
+          close: true,
+          gravity: "top", 
+          position: "right", 
+          stopOnFocus: true, 
+          style: {
+            background: "#000000",
+            borderRadius: "10px"
+          },
+          onClick: function(){} 
+        }).showToast();
+      }
   };
 
   const removeItem = (itemId) => {

@@ -13,6 +13,7 @@ const Cart = () => {
         let newTotalQuantity = 0;
         let newTotal = 0;
 
+        //cantidad de cada producto y precio total
         cart.forEach((item) => {
             newTotalQuantity += item.quantity;
             newTotal += item.price * item.quantity;
@@ -32,23 +33,21 @@ const Cart = () => {
     }
 
     return (
-        <>
+        <div className="cart-container">
             <div className="cartProduct-container">
+                {/*articulos del carrito*/}
                 {cart.map((p) => (
                     <CartItem key={p.id} {...p} />                    
-                ))}                           
-                
+                ))}                                           
             </div>
-            
-            
+                       
             <p className="total-price">Total: ${total}</p>
 
-            <div className="buttons-cart">
-                
+            <div className="buttons-cart">                
                 <button className="button-clear-cart" onClick={() => clearCart()}>Limpiar carrito</button>
                 <button className="button-pay"><Link to="/pagar">Pagar: ${total}</Link></button>
             </div>
-        </>
+        </div>
     );
 }
 

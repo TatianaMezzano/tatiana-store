@@ -15,7 +15,7 @@ const MenuProducts = ({ item }) => {
             </div>
         );
     } else {
-        return <div>No se ha proporcionado un elemento válido.</div>;
+        return <div>No se ha proporcionado un elemento válido</div>;
     }
 };
 
