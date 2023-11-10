@@ -8,39 +8,15 @@ import { CartProvider } from './context/CartContext';
 import { Route, Routes } from 'react-router-dom';
 import Cart from './components/Cart/Cart';
 import Loading from './components/Loading/Loading'; // Importa el componente Loading
-import { useEffect, useState } from 'react';
-import { getFirestore, collection, getDocs } from 'firebase/firestore';
+import { getFirestore } from 'firebase/firestore';
 import Layout from './components/Layout';
+import { AppUseEffect } from './components/UseEffects';
 
 function App() {
-  const [items, setItems] = useState([]);
-  const [loading, setLoading] = useState(true); // Estado de carga
+
   const db = getFirestore();
 
-  useEffect(() => {
-    const itemsCollection = collection(db, 'items');
-
-    // Simula una demora de 2 segundos antes de cargar los datos
-    const delay = 700; // 2 segundos
-
-    setTimeout(() => {
-      // Cargar los datos y establecer el estado de carga en falso una vez que se complete
-      getDocs(itemsCollection)
-        .then((info) => {
-          if (!info.empty) {
-            setItems(info.docs.map(doc => ({
-              id: doc.id,
-              ...doc.data()
-            })));
-          }
-          setLoading(false); // Marcar como no cargando
-        })
-        .catch((error) => {
-          console.error("Error fetching data:", error);
-          setLoading(false); // Marcar como no cargando en caso de error
-        });
-    }, delay);
-  }, [db]);
+ const {items, loading} = AppUseEffect (db)
 
   return (
     <CartProvider>

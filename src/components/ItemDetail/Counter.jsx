@@ -2,7 +2,7 @@
 const Counter = ({count, setCount}) => {
     
     return (
-        <div >           
+        <div className="counter-container-item">           
             
             <button className="counter" onClick={() => count > 1 ? setCount((count) => count - 1):null}>
                 -
