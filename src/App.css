@@ -196,6 +196,13 @@ h1{
 
 /*carrito*/
 
+.cartItem-container-general{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 2rem;
+}
+
 .cartItem-container{
 
   display: flex;
@@ -295,6 +302,7 @@ h1{
   color: #FFFFFF;
   transition: transform 0.4s;
   justify-self: flex-end;
+  margin-left: 4rem;
  
 }
 .button-delete-cart-item:hover{
@@ -326,6 +334,55 @@ h1{
   margin: 1rem 0;
 }
 
+/*terminar compra*/
+
+.terminar-compra-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6rem;
+  
+}
+
+.button-terminar-compra{
+  color: #FFFFFF;
+  background-color: #000000;
+  margin: 1.8rem;
+  font-size: 1.5rem;
+  transition: transform 0.4s;
+}
+
+.button-terminar-compra:hover{
+  transform: scale(1.1) ;
+  border: none;
+}
+
+.form-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 4rem;
+ 
+}
+
+.form-item{
+  margin: 1.5rem;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.button-pagar{
+  color: #FFFFFF;
+  background-color: #000000;
+  transition: transform 0.4s;
+  margin: 3rem;
+}
+.button-pagar:hover{
+  border:none;
+  transform: scale(1.1) ;
+}
+
 
 
 /*footer*/
@@ -335,7 +392,7 @@ h1{
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: 2rem;
+  margin-top: 8rem;
 }
 
 
@@ -347,6 +404,48 @@ h1{
 .footer-icon:hover{
   transform: scale(1.1) ;
 }
+
+/*not found*/
+
+.not-found-container{
+  display: flex;
+  flex-direction: column;
+  
+  align-items: center;
+  padding: 9.9rem 0;
+}
+
+h1{
+  color: #000000;
+}
+
+/*enlaces iconos*/
+
+.enlaces-iconos-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem;
+}
+
+.enlaces-iconos-item{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.enlaces-iconos-item a{
+  color: #000000;
+}
+
+.enlaces-iconos-item a:hover{
+  color: #636363;
+}
+
+.enlaces-iconos-titulo{
+  margin: 1.5rem;
+}
+
 
   
 /*mobile*/
@@ -369,6 +468,11 @@ h1{
   .galeria-container{
     display: flex;
     flex-direction: column;
+  }
+
+  .cart-item{
+    font-size: 1.2rem;
+    margin: 0.5rem;
   }
 
   .cartItem-container-general{

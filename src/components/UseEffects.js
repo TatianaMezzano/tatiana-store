@@ -130,13 +130,13 @@ const ProductItemUseEffect = (data, productTitle) => {
 
 
 
-const AppUseEffect = (db) => {
+const AppUseEffect = (data) => {
 
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true); 
 
   useEffect(() => {
-    const itemsCollection = collection(db, 'items');
+    const itemsCollection = collection(data, 'items');
 
     // Simula una demora antes de cargar los datos para que se vea la animacion del loading
     const delay = 700; 
@@ -158,7 +158,9 @@ const AppUseEffect = (db) => {
           setLoading(false); // Desactiva la animación del loading
         });
     }, delay);
-  }, [db]);
+  }, [data]);
+
+  
 
   return {items, loading}
 }

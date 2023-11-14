@@ -11,6 +11,9 @@ import Loading from './components/Loading/Loading'; // Importa el componente Loa
 import { getFirestore } from 'firebase/firestore';
 import Layout from './components/Layout';
 import { AppUseEffect } from './components/UseEffects';
+import NotFound from './components/NotFound';
+import EnlacesIconos from './components/EnlacesIconos';
+import TerminarCompra from './components/TerminarCompra';
 
 function App() {
 
@@ -30,8 +33,12 @@ function App() {
             )} />
             <Route path="/category/:categoryName" element={<ItemListContainer greeting={<CategoryPage data={db} />} />}  />
             <Route path="/item/:productTitle" element={<ItemDetailContainer greeting={<ProductItem data={db} />} />} /> {/* Cambié ProducItem a ProductItem */}
-            <Route path="/cart" element={<Cart />} />
-            <Route path="*" element={<h1>Not Found</h1>} />
+            <Route path="/cart" element={<Cart />} >
+              <Route path="terminarCompra" element={<TerminarCompra />}/>             
+            </Route>          
+            
+            <Route path="*" element={<NotFound/>} />
+            <Route path="iconos" element={<EnlacesIconos/>}/>
           </Routes>
         </Layout>
       </div>
