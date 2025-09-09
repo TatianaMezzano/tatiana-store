@@ -3,6 +3,7 @@ import App from './App.jsx'
 import './index.css'
 import { BrowserRouter } from 'react-router-dom'
 import {initializeApp} from "firebase/app"
+import { HashRouter } from "react-router-dom";
 
 const firebaseConfig = {
     apiKey: "AIzaSyCiU2QPP1xIl_s-jMSrFcF6NKrOxVntM5s",
@@ -17,8 +18,8 @@ const firebaseConfig = {
 initializeApp(firebaseConfig);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-    <BrowserRouter>
+    <HashRouter>
         <App />
-    </BrowserRouter>
+    </HashRouter>
     
 )
